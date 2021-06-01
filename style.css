@@ -7,6 +7,8 @@ body {
     -webkit-font-smoothing: antialiased;
     height: 100%;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 #restartbtn {
@@ -314,4 +316,19 @@ body {
     color: #fff;
     text-decoration: none;
     text-align: center;
+}
+
+#menu {
+    padding: 8px;
+    color: #fff;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+}
+
+.item-person {
+    display: flex;
 }

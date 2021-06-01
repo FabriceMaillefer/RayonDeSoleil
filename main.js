@@ -19,9 +19,8 @@ jQuery(document).ready(function ($) {
                 // Check the PIN
                 if (enterCode == pin) {
                     // Right PIN!
-                    $("#fields .numberfield").addClass("right");
-                    $("#numbers").addClass("hide");
-                    $("#anleitung p").html("Bravo!<br>C'est correct!");
+                    $("#pincode").hide();
+                    $("#menu").show();
 
                 } else {
                     // Wrong PIN!
@@ -40,12 +39,26 @@ jQuery(document).ready(function ($) {
 
         });
 
-        $("#restartbtn").click(function () {
-            enterCode = "";
-            $("#fields .numberfield").removeClass("active");
-            $("#fields .numberfield").removeClass("right");
-            $("#numbers").removeClass("hide");
-            $("#anleitung p").html("<strong>Please enter the correct PIN-Code.</strong><br> It is: 1234 / Also try a wrong code");
+        var listElem = [
+            { name: 'Tibeau Lambveret', audio: 'morse1.mp3' },
+            { name: 'Tibeau2 Lambveret', audio: 'morse2.mp3' },
+            { name: 'Tibeau3 Lambveret', audio: 'morse3.mp3' },
+            { name: 'Tibeau4 Lambveret', audio: 'morse4.mp3' },
+        ]
+        $.each(listElem, function (index, value) {
+            $("#list-messages-audios").append(
+                '<div class="list-item">' +
+                '    <div class="item-person">' +
+                '        <span class="material-icons">face</span>' +
+                '        <span>' + value.name + '</span>' +
+                '    </div>' +
+                '    <div class="item-sound">' +
+                '        <audio controls>' +
+                '            <source src="' + value.audio + '" type="audio/mpeg">' +
+                '        </audio>' +
+                '    </div>' +
+                '</div>'
+            );
         });
 
     });
