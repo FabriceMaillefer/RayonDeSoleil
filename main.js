@@ -1,3 +1,31 @@
+var audio;
+var previousItem;
+function playAudio(item, url) {
+
+    if (previousItem) {
+        $(previousItem).html('play_arrow');
+    }
+    if (audio) {
+        audio.pause();
+    }
+
+    if (previousItem != item) {
+        $(item).html('pause');
+
+        previousItem = item;
+        audio = new Audio(url);
+        audio.currentTime = 0;
+        audio.play();
+
+        audio.onended = function () {
+            if (previousItem) {
+                $(previousItem).html('play_arrow');
+                previousItem = null;
+            }
+        };
+    }
+}
+
 jQuery(document).ready(function ($) {
     $(document).ready(function () {
 
@@ -56,9 +84,7 @@ jQuery(document).ready(function ($) {
                 '        <span>' + value.name + '</span>' +
                 '    </div>' +
                 '    <div class="item-sound">' +
-                '        <audio controls>' +
-                '            <source src="audio/' + value.audio + '" type="audio/mpeg">' +
-                '        </audio>' +
+                '        <span class="material-icons" onclick="playAudio(this, \'audio/' + value.audio + '\')">play_arrow</span>' +
                 '    </div>' +
                 '</div>'
             );
