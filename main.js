@@ -72,8 +72,8 @@ jQuery(document).ready(function ($) {
             { name: 'John Doe', audio: 'morse-BONJOUR.mp3' },
             { name: 'Alain Berset', audio: 'morse-RAYON_DE_SOLEIL.mp3' },
             { name: 'Jaques Rocher', audio: 'morse-RAYON_DE_SOLEIL.mp3' },
-            { name: 'Anne Jaquet', audio: 'morse-RAYON_DE_SOLEIL.mp3' },
-            { name: 'Clélia Jouve', audio: 'morse-RAYON_DE_SOLEIL.mp3' },
+            { name: 'Nathalie Moller', audio: 'proutNathFabien.mp3' },
+            { name: 'Clélia Jouvre', audio: 'morse-RAYON_DE_SOLEIL.mp3' },
             { name: 'Obi Wan', audio: 'morse-RAYON_DE_SOLEIL.mp3' },
         ]
         $.each(listElem, function (index, value) {

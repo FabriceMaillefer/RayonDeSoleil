@@ -9,7 +9,6 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
-    font-size: 20px;
 }
 
 #restartbtn {
@@ -333,4 +332,8 @@ body {
 
 .item-person {
     display: flex;
+}
+
+.list-item .material-icons {
+    font-size: 40px;
 }
