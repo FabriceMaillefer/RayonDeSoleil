@@ -30,7 +30,7 @@ jQuery(document).ready(function ($) {
     $(document).ready(function () {
 
         // http://www.jsfuck.com/
-        var pin = 1;
+        var pin = 123456;
         var enterCode = "";
         enterCode.toString();
 
@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
             lengthCode--;
             $("#fields .numberfield:eq(" + lengthCode + ")").addClass("active");
 
-            if (lengthCode == 0) {
+            if (lengthCode == 5) {
 
                 // Check the PIN
                 if (enterCode == pin) {
