@@ -68,20 +68,25 @@ jQuery(document).ready(function ($) {
         });
 
         var listElem = [
-            { name: 'Tibeau Lambveret', audio: 'morse-RAYON_DE_SOLEIL.mp3' },
-            { name: 'John Doe', audio: 'morse-BONJOUR.mp3' },
-            { name: 'Alain Berset', audio: 'morse-RAYON_DE_SOLEIL.mp3' },
-            { name: 'Jaques Rocher', audio: 'morse-RAYON_DE_SOLEIL.mp3' },
-            { name: 'Nathalie Moller', audio: 'proutNathFabien.mp3' },
-            { name: 'Clélia Jouvre', audio: 'morse-RAYON_DE_SOLEIL.mp3' },
-            { name: 'Obi Wan', audio: 'morse-RAYON_DE_SOLEIL.mp3' },
+            { name: 'Tibeau Lambveret', phone: '033 057 24 25', audio: 'morse-3.mp3' },
+            { name: 'John Doe', phone: '033 683 8108', audio: 'morse-BONJOUR.mp3' },
+            { name: 'Alain Berset', phone: '033 175 57 77', audio: '2284.mp3' },
+            { name: 'Jaques Rocher', phone: '034 485 85 48', audio: '1143.mp3' },
+            { name: 'Piere Noël', phone: '033 484 11 02', audio: '2077.mp3' },
+            { name: 'Tibeault Rojuan', phone: '033 223 18 58', audio: 'morse-9.mp3' },
+            { name: 'Nathalie Moller', phone: '033 871 25 59', audio: 'proutNathFabien.mp3' },
+            { name: 'Clélia Jouvre', phone: '033 741 73 78', audio: '2363.mp3' },
+            { name: 'Tibeaut Fringant', phone: '033 183 72 39', audio: 'morse-RAYON_DE_SOLEIL.mp3' },
+            { name: 'Obi Wan', phone: '033 293 31 78', audio: '2354.mp3' },
+
         ]
         $.each(listElem, function (index, value) {
             $("#list-messages-audios").append(
                 '<div class="list-item">' +
                 '    <div class="item-person">' +
                 '        <span class="material-icons">face</span>' +
-                '        <span>' + value.name + '</span>' +
+                '        <div class="item-person-name"><span>' + value.name + '</span>' +
+                '        <i>' + value.phone + '</i></div>' +
                 '    </div>' +
                 '    <div class="item-sound">' +
                 '        <span class="material-icons" onclick="playAudio(this, \'audio/' + value.audio + '\')">play_arrow</span>' +
