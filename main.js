@@ -30,7 +30,7 @@ jQuery(document).ready(function ($) {
     $(document).ready(function () {
 
         // http://www.jsfuck.com/
-        var pin = 123456;
+        var pin = 134247;
         var enterCode = "";
         enterCode.toString();
 
